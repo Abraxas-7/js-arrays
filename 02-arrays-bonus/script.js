@@ -20,11 +20,17 @@ console.log(longNames);
 
 /*
   filter crea un nuovo array che contiene gli elementi che soddifano una condizione, non cambia l'array originale
-  se ritorna true l'elemento viene incluso nel nuovo array, altrimenti con false viene escluso
+  se il call back ritorna true l'elemento viene incluso nel nuovo array, altrimenti con false viene escluso
   - teacher: è l'elemento corrente dell'array (nome insegnante)
   - teacher.length: calcola la lunghezza dell'elemento corrente
   - teacher.length >= 5: verifica se la lunghezza del elemetno (nome insegnanet) è maggiore o uguale a 5, se vero l'elemento viene incluso nel array longNames
-*/
+
+  con l'arrow semplifico lz funzione, dato che filter chiama la funzione con all'interno la condizione 
+  senza arrow
+    const longNames = teachers.filter(function(teacher) {
+      return teacher.length >= 5;
+    });
+  */
 
 // 3. Rimuovi 'Ed' dall'array teachers
 const index = teachers.indexOf('Ed');
